@@ -23,6 +23,12 @@
 				<section>
 					<section data-background-color="#ECFEAA" class="black">
              <h3>Progressive web apps combine the best features of traditional websites and platform-specific apps</h3>
+             <aside class="notes">
+              The term PWA was created in 2015 by Google engineer Alex Russel.
+              A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app. 
+              It has the capabilities of a native app while having the reach of a web app.
+              Let’s take a step back and refresh what we know about native apps and web apps.
+             </aside>
             </section>
 					<section>
 						<h3>Native apps</h3>
@@ -35,6 +41,16 @@
               <li>OS integration</li>
               <li>App store integration</li>
 						</ul>
+            <aside class="notes">
+              Platform-specific apps are developed for a specific operating system (OS) and/or class of device, like an iOS or Android device, generally using an SDK provided by the platform vendor. They are usually distributed using the vendor's app store, where the user can find and install them.
+              They get their own icon on the device, making it easy for users to find and open them.
+              They are able to operate when the user is not interacting with them and when the device is offline. 
+              This, for example, enables a chat app to receive messages when it is not open, and display a notification to the user. 
+              It also enables a news app to update in the background so it can show fresh content even if the device is offline.
+              Distinctive, immersive UI.
+              They can be integrated into the host OS: for example, a messaging app can register as a share target
+              hey are distributed using the app store, giving users a single place to find them and a consistent way to decide whether they want to install them.
+            </aside>
 					</section>
           <section>
 						<h3>Traditional websites</h3>
@@ -43,6 +59,11 @@
               <li>Single codebase</li>
               <li>Distribution via the web</li>
 						</ul>
+            <aside class="notes">
+              A website does not have a presence on the user's device when the user is not accessing it, can only be accessed by the user opening the browser and navigating to the site, and is highly dependent on network connectivity.
+              Because the web is inherently cross-platform, a website can run on different operating systems and device classes from a single codebase.
+              Can be shared and accessed just using URLs. A website can be distributed with no need to sign up to any vendor's app store.
+            </aside>
 					</section>
 				</section>
 				<section data-background-color="#ECFEAA">
@@ -57,6 +78,12 @@
                 <li>PWAs can be launched automatically when an associated file type is opened</li>
                 <li>PWAs can be submitted to application stores</li>
               </ul>
+              <aside class="notes">
+                Work while the device does not have network connectivity.
+                Update content in the background.
+                Respond to push messages from the server.
+                Display notifications using the OS notifications system.
+              </aside>
             </div>
           </section>
           <section>
@@ -66,7 +93,11 @@
                 <li>PWAs support push notifications</li>
                 <li>PWAs can perform periodic updates even when the application is not running</li>
                 <li>PWAs can access hardware features</li>
-              </ul>  
+              </ul>
+              <aside class="notes">
+                PWAs can use the whole screen, rather than running in the browser UI.
+                PWAs can be integrated into the device, registering as share targets and sources, and accessing device features.
+              </aside>
             </div>
           </section>
           <section><h3>Web-related advantages</h3></section>
@@ -77,6 +108,11 @@
                 <li>PWAs can be shared and launched from a standard web link</li>
                 <li>PWAs are safe for users because they use secure HTTPS endpoints and other user safeguards</li>
               </ul>
+              <aside class="notes">
+                PWAs can be indexed by search engines.
+                PWAs are safe for users because they use secure HTTPS endpoints and other user safeguards.
+                PWAs can use advanced web APIs such as WebBluetooth, WebUSB, WebPayment, WebAuthn, or WebAssembly.
+              </aside>
             </div>
           </section>
           <section>
@@ -94,7 +130,13 @@
                 <li>Cross-platform compatibility</li>
                 <li>Small app weight</li>
                 <li>Low entry level</li>
-              </ul>  
+              </ul>
+              <aside class="notes">
+                Lower development cost: PWAs have a much lower cross-platform development cost than compiled apps that require a specific, separate codebase for each platform, such as Android, iOS, and each desktop operating system.
+                With a PWA, you can use a single codebase that's shared between your website, mobile app, and desktop app (across operating systems), hence 
+                Shorter time to market
+                Cross-device compatibility
+              </aside>
             </div>
           </section>
         </section>
@@ -118,15 +160,27 @@
             <div class='r-stack'>
               <img class="r-stretch" src="images/pwa-environment.svg">
             </div>
+            <aside class="notes">
+              PWAs typically look like platform-specific apps － they are usually displayed without the browser UI around them － but they are, as a matter of technology, still websites. This means they need a browser engine to manage and run them. With a platform-specific app, the platform OS manages the app, providing the environment in which it runs. With a PWA, a browser engine performs this background role, just like it does for normal websites.
+              Because PWAs are websites, they have the same basic features as any other website: at least one HTML, CSS, JS. Like a normal website, the JavaScript loaded by the page has a global Window object and can access all the Web APIs that are available through that object.
+            </aside>
           </section>
           <section>
             <h2>Web App Manifest</h2>
           </section>
           <section>
             <h2>Service worker</h2>
+            <aside class="notes">
+              Service workers are often used with PWAs in order to provide at least a minimal offline experience
+              Can be started by the browser in the background when they are needed (for example, to handle a push notification).
+            </aside>
           </section>
           <section>
             <h2>PWAs and SPAs</h2>
+            <aside class="notes">
+              Single-page apps can provide a user experience that is closer to platform-specific apps, so PWAs are often implemented as single-page apps. In particular, single-page apps make it easier to achieve a seamless user interface, in which the user is presented with a single, consistent page, and only the relevant parts of the page are updated as the user interacts with the app.
+              However, PWAs don't have to be single-page apps, and single-page apps don't have to be PWAs.
+            </aside>
           </section>
         </section>
         <section>
@@ -141,23 +195,43 @@
               <img class="fragment current-visible" src="images/recommendations.jpg">
               <img class="fragment current-visible" src="images/notifications.jpg">
             </div>
+            <aside class="notes">
+              Users hate delays and unreliability on mobile
+              Fifty percent of smartphone users are more likely to use a company's mobile site when browsing or shopping because they don't want to download an app.
+              One of the top reasons for uninstalling an app is limited storage. (An installed PWA usually takes less than 1MB).
+              Smartphone users are more likely to purchase from mobile sites that offer relevant recommendations on products, and 85% of smartphone users say mobile notifications are useful.
+            </aside>
           </section>
         </section>
         <section>
           <h2>Pinterest case study</h2>
           <p>Core engagement <span class="underline">increased by 60%</span>, also they saw a <span class="underline"> 44% increase in user-generated ad revenue</span> and time spent on their mobile site has <span class="underline">increased by 40%</span>
           </p>
+          <aside class="notes">
+            Pinterest, a social media platform with over 478 million global monthly active users as of March 2021. As expected, over 80% of those people access it from their mobile devices. Which wouldn’t be the case should they ignore the potential presented by a PWA-powered application.
+            In the year 2017, after Pinterest’s team decided to analyse their unauthenticated mobile web users, they came to the shocking realization that their website converted 1% of their users into sign-ups, logins or native app installations.
+            The situation was bad. Pinterest's visitors often had to wait 23 seconds before any UI was usable at all.
+          </aside>
         </section>
         <section>
           <h2>Uber case study</h2>
           <p>Uber PWA was designed to fast even on 2G.<br>
             The core <span class="underline"> app is only 50kb and takes less than 3s to load</span>
           </p>
+          <aside class="notes">
+            According to Angus Croll, an engineer from Uber Web Platform Team, they needed to build a mobile web version of their platform to provide decent user experience on both low-end devices and in places with a bad internet connection, such as 2G networks
+            As a result, when the team finished developing the PWA app, the size of its core ‘request a ride’ packages was only 50 kB, which meant only 3 seconds loading time on an average 2G network connectivity.
+          </aside>
         </section>
         <section>
           <h2>Trivago case study</h2>
           <p><span class="underline">Increase of 150%</span> of people who <span class="underline">add Trivago PWA  to home screen</span>, <span class="underline">97% increase in clickouts</span> to hotel offers, <span class="underline">67% of users continue to browse</span> site when they come back online
           </p>
+          <aside class="notes">
+            Trivago noticed in 2017 that they were already getting more traffic from mobile devices than from laptop or desktop computers. Amongst some of the more generic problems, like signal loses in elevators or subways, that resulted in broken sessions and searches, which in turn lead to increased user frustration
+            Trivago PWA online app was released in 33 languages in 55 countries back in 2017
+            Over 500 000 users added the PWA to their homescreens
+          </aside>
         </section>
         <section data-background-color="#ECFEAA">
           <h2 class="black">Thank you</h2>
